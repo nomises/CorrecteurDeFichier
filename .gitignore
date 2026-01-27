@@ -9,4 +9,5 @@
 /httpRequests/
 
 # ignore les fichiers créé par le l'IDEA
-/.idea/*
+/.idea/
+*.*
