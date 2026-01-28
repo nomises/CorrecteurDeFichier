@@ -5,4 +5,6 @@ public class Const {
     static String PATH_RESULTAT = PATH + "\\" + "_resultat.txt";
     static String TEMP = "TEMP_";
     static String SEPARATEUR = "----------------------------------------------";
+    static char LF = '\n';
+    static String CRLF = "\r\n";
 }

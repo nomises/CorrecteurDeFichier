@@ -19,11 +19,11 @@ public class FileOperation {
         //Résultat
         try(FileWriter writerResultat = new FileWriter(Const.PATH_RESULTAT, true)){
             writerResultat.write(
-                    file.getName() + "\n" +
-                            "LF: " + compteurLF + "\n" +
-                            "CLRF: " + compteurCRLF + "\n" +
-                            "Nombre de ligne: " + compteurLigne + "\n" +
-                            Const.SEPARATEUR + "\n" + "\n"
+                    file.getName() + Const.LF +
+                            "LF: " + compteurLF + Const.LF +
+                            "CLRF: " + compteurCRLF + Const.LF +
+                            "Nombre de ligne: " + compteurLigne + Const.LF +
+                            Const.SEPARATEUR + Const.LF + Const.LF
             );
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -42,24 +42,24 @@ public class FileOperation {
                     compteurLigne++;
                     char[] ligne = data.toCharArray();
                     myWriter.write(data);
-                    //Si data.length = " alors \n
+                    //Si data.length = " alors LF
                     if (ligne.length > 0){
                         if (ligne[ligne.length -1] == '"'){
-                            myWriter.write("\n");
+                            myWriter.write(Const.LF);
                             compteurLF++;
                         } else if (ligne[ligne.length -1] == '}'){
-                            myWriter.write("\r\n");
+                            myWriter.write(Const.LF);
                             compteurCRLF++;
                         }
-                        //Sinon le reste est \r\n
+                        //Sinon le reste est CRLF
                         else{
-                            myWriter.write("\r\n");
+                            myWriter.write(Const.CRLF);
                             compteurCRLF++;
                         }
                     }
                     //Si data.length = 0 alors \n
                     else{
-                        myWriter.write("\n");
+                        myWriter.write(Const.LF);
                         compteurLF++;
                     }
                 }
