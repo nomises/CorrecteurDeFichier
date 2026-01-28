@@ -10,3 +10,6 @@
 
 # ignore les fichiers créé par le l'IDEA
 .idea/
+
+# ignore les fichiers compilé
+out/
