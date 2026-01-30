@@ -13,3 +13,6 @@
 
 # ignore les fichiers compilé
 out/
+
+# ignore les fichiers auto généré par maven
+target/
