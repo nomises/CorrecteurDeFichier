@@ -9,7 +9,7 @@
   <version>1</version>
 
   <name>CorrecteurDeFichier</name>
-  <url>https://nomises/CorrecteurDeFichier/release</url>
+  <url>https://github.com/nomises/CorrecteurDeFichier/release</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
