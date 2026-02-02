@@ -45,7 +45,7 @@ public class FileOperation {
                     //Si data.length = " alors LF
                     if (ligne.length > 0){
                         if (ligne[ligne.length -1] == '"'){
-                            myWriter.write(Const.LF);
+                            myWriter.write(Const.CRLF);
                             compteurLF++;
                         } else if (ligne[ligne.length -1] == '}'){
                             myWriter.write(Const.LF);
