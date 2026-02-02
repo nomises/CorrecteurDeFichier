@@ -79,7 +79,7 @@
               <manifest>
                 <addClasspath>true</addClasspath>
                 <classpathPrefix>lib/</classpathPrefix>
-                <mainClass>com.nomises.main</mainClass>
+                <mainClass>1.main</mainClass>
               </manifest>
             </archive>
           </configuration>
