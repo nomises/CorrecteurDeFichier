@@ -54,7 +54,7 @@ public class FileOperation {
                         //Si la ligne finis par } alors LF
                         } else if (ligne[ligne.length -1] == '}'){
                             myWriter.write(Const.LF);
-                            compteurCRLF++;
+                            compteurLF++;
                         }
                         //Sinon le reste est CRLF
                         else{
@@ -62,7 +62,7 @@ public class FileOperation {
                             compteurCRLF++;
                         }
                     }
-                    //Si data.length = 0 alors \n
+                    //Si rien alors \n
                     else{
                         myWriter.write(Const.LF);
                         compteurLF++;
