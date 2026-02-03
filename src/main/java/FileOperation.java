@@ -42,11 +42,16 @@ public class FileOperation {
                     compteurLigne++;
                     char[] ligne = data.toCharArray();
                     myWriter.write(data);
-                    //Si data.length = " alors LF
                     if (ligne.length > 0){
-                        if (ligne[ligne.length -1] == '"'){
-                            myWriter.write(Const.CRLF);
+                        //Si la ligne n'a que le charactere " alors LF
+                        if (ligne.length == 1 && ligne[0] == '"'){
+                            myWriter.write(Const.LF);
                             compteurLF++;
+                        //Si la ligne finis par " alors CRLF
+                        } else if (ligne[ligne.length -1] == '"'){
+                            myWriter.write(Const.CRLF);
+                            compteurCRLF++;
+                        //Si la ligne finis par } alors LF
                         } else if (ligne[ligne.length -1] == '}'){
                             myWriter.write(Const.LF);
                             compteurCRLF++;
